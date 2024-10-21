@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bebeziana"
+version = "2024.10.1"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "pyyaml>=6.0",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Butakov Ivan", email = "vanessbut@yandex.com"},
+]
+maintainers = [
+  {name = "Butakov Ivan", email = "vanessbut@yandex.com"}
+]
+description = "Hierarchical tabular data postprocessing"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["benchmarks", "tabular"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+
+[project.urls]
+Repository = "https://github.com/VanessB/bebeziana.git"
+"Bug Tracker" = "https://github.com/VanessB/bebeziana/issues"
+Changelog = "https://github.com/VanessB/bebeziana/blob/master/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["source/python/bebeziana"]
